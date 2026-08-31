@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://khawajasaim0.github.io/Khawaja-Saim/sitemap.xml

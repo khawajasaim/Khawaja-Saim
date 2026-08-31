@@ -108,3 +108,128 @@
     max-width:95%;
   }
 }
+
+
+/* ===== Strong portrait enlargement override ===== */
+@media (min-width: 981px) {
+  .seo-hero-grid{
+    grid-template-columns:minmax(0,1.08fr) minmax(440px,.92fr) !important;
+    gap:18px !important;
+  }
+
+  .seo-hero-visual{
+    width:540px !important;
+    max-width:100% !important;
+    min-height:455px !important;
+    justify-self:end !important;
+    transform:translateX(-8px);
+  }
+
+  .seo-person{
+    height:108% !important;
+    max-width:108% !important;
+    right:-1% !important;
+    bottom:-2% !important;
+  }
+
+  .seo-glow{
+    left:2% !important;
+    right:-2% !important;
+    top:5% !important;
+    bottom:-2% !important;
+  }
+
+  .seo-stat.s1{
+    left:-1% !important;
+    top:16% !important;
+  }
+
+  .seo-stat.s2{
+    right:-2% !important;
+    top:30% !important;
+  }
+
+  .seo-stat.s3{
+    left:1% !important;
+    bottom:6% !important;
+  }
+}
+
+@media (min-width: 981px) and (max-width: 1250px) {
+  .seo-hero-visual{
+    width:500px !important;
+    min-height:440px !important;
+  }
+  .seo-person{
+    height:104% !important;
+    max-width:104% !important;
+  }
+}
+
+
+/* ===== FINAL: center portrait exactly inside glow ===== */
+@media (min-width: 981px) {
+  .seo-hero-visual{
+    position: relative !important;
+  }
+
+  .seo-glow{
+    left: 50% !important;
+    top: 50% !important;
+    right: auto !important;
+    bottom: auto !important;
+    width: 430px !important;
+    height: 430px !important;
+    transform: translate(-50%, -50%) !important;
+  }
+
+  .seo-person{
+    left: 50% !important;
+    top: 50% !important;
+    right: auto !important;
+    bottom: auto !important;
+    height: 104% !important;
+    max-width: 104% !important;
+    transform: translate(-50%, -50%) !important;
+  }
+
+  .seo-stat.s1{
+    left: 1% !important;
+    top: 18% !important;
+  }
+
+  .seo-stat.s2{
+    right: 1% !important;
+    top: 31% !important;
+  }
+
+  .seo-stat.s3{
+    left: 4% !important;
+    bottom: 8% !important;
+  }
+}
+
+@media (max-width: 980px) {
+  .seo-hero-visual{
+    position: relative !important;
+  }
+
+  .seo-glow{
+    left: 50% !important;
+    top: 50% !important;
+    right: auto !important;
+    bottom: auto !important;
+    width: 82% !important;
+    aspect-ratio: 1 / 1 !important;
+    height: auto !important;
+    transform: translate(-50%, -50%) !important;
+  }
+
+  .seo-person{
+    left: 50% !important;
+    top: 50% !important;
+    right: auto !important;
+    bottom: auto !important;
+    transform: translate(-50%, -50%) !important;
+  }
+}

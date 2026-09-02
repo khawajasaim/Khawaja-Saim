@@ -143,7 +143,7 @@ h3 { font-size:clamp(1.45rem,2.25vw,2.25rem); line-height:1.06; }
 .text-link::after { content:"↗"; color:var(--accent); transition:transform .2s ease; }
 .text-link:hover::after { transform:translate(2px,-2px); }
 
-.hero { padding:clamp(4rem,8vw,7rem) 0 2.75rem; overflow:hidden; }
+.hero { padding:clamp(1.5rem,2.5vw,2.5rem) 0 2.75rem; overflow:hidden; }
 .hero-grid { display:grid; grid-template-columns:minmax(0,1.04fr) minmax(420px,.96fr); gap:clamp(2.5rem,5vw,5rem); align-items:center; }
 .hero-copy .eyebrow { margin-bottom:1.4rem; }
 .hero-copy h1 { max-width:880px; }
@@ -418,7 +418,7 @@ h3 { font-size:clamp(1.45rem,2.25vw,2.25rem); line-height:1.06; }
   .brand-name { display:none; }
   h1 { font-size:clamp(3.1rem,15vw,4.5rem); }
   h2 { font-size:clamp(2.4rem,12vw,3.7rem); }
-  .hero { padding-top:3.5rem; }
+  .hero { padding-top:1.5rem; }
   .hero-art { min-height:470px; }
   .hero-art::before { font-size:10rem; top:.08em; }
   .hero-portrait { width:96%; right:-12%; }

@@ -166,9 +166,12 @@ h3 { font-size:clamp(1.45rem,2.25vw,2.25rem); line-height:1.06; }
 .hero-proof p { margin:.75rem 0 0; font-size:12px; color:var(--muted-strong); max-width:220px; }
 .hero-axis {
   position:absolute; left:0; bottom:24px; z-index:4; display:flex; gap:.65rem; flex-wrap:wrap; align-items:center;
+  width:min(74%,420px); padding:.62rem 1.15rem .62rem 0;
   font-size:10px; letter-spacing:.13em; text-transform:uppercase; color:var(--muted-strong);
+  background:linear-gradient(90deg, rgba(11,13,15,.98) 0%, rgba(11,13,15,.90) 72%, rgba(11,13,15,0) 100%);
 }
-.hero-axis b { color:var(--accent); font-weight:600; }
+.hero-axis b { color:var(--text); font-weight:650; }
+.hero-axis span { color:var(--accent); font-weight:700; }
 
 .results-strip { border-block:1px solid var(--line); background:rgba(255,255,255,.012); }
 .results-grid { display:grid; grid-template-columns:repeat(3,1fr); }

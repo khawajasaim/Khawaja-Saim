@@ -1,21 +1,24 @@
-# Khawaja Saim Portfolio - SEO/GEO Final
+# Khawaja Saim — Premium Portfolio Redesign
 
-Live base URL configured in this build:
-https://khawajasaim.github.io/Khawaja-Saim/
+Design direction: premium editorial personal consultancy, built around **Attention → Acquisition → Automation**.
 
-Included:
-- 7 crawlable HTML pages
-- Unique titles and meta descriptions
-- Canonical URLs
-- Open Graph + Twitter metadata
-- Person, WebSite, WebPage, Service, Breadcrumb and FAQ structured data
-- Internal contextual linking
-- XML sitemap with accurate update date
-- robots.txt
-- Responsive desktop/mobile hero
-- Resume and case-study downloads
-- Descriptive image alt text and lazy loading for below-fold images
+## Files
+- `index.html` — main conversion-focused portfolio
+- `social-media-marketing.html` — social media service page
+- `paid-ads.html` — performance marketing / paid ads page
+- `ai-automation.html` — AI marketing automation page
+- `case-studies.html` — documented campaign proof
+- `about.html` — personal positioning and working principles
+- `contact.html` — contact and recruiter downloads
+- `styles.css` — shared design system
+- `script.js` — lightweight navigation, reveal and counter behavior
+- `assets/` — optimized proof images, portrait, resume, case-study PDF and social preview
 
-Important:
-If the GitHub repository is later renamed to `khawajasaim.github.io`, the site base URL changes to `https://khawajasaim.github.io/`.
-At that point update canonical URLs, Open Graph URLs, sitemap.xml and robots.txt before submitting the root property to Search Console.
+## Brand tokens
+- Background: `#0B0D0F`
+- Text: `#F5F5F2`
+- Secondary text: `#9DA39F`
+- Accent: `#9FE870`
+- Paper contrast: `#F2F2EC`
+
+GA4 measurement ID `G-KCSNS8PYEG` is retained on all HTML pages.

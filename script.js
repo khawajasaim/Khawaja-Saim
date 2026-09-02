@@ -32,6 +32,42 @@
     });
   }
 
+
+  const serviceNav = document.querySelector('.nav-service');
+  const serviceTrigger = document.querySelector('.nav-service-trigger');
+  const mobileServices = document.querySelector('.mobile-services');
+  const mobileServicesTrigger = document.querySelector('.mobile-services-trigger');
+
+  const closeServiceDropdown = () => {
+    if (!serviceNav || !serviceTrigger) return;
+    serviceNav.classList.remove('is-open');
+    serviceTrigger.setAttribute('aria-expanded', 'false');
+  };
+
+  if (serviceNav && serviceTrigger) {
+    serviceTrigger.addEventListener('click', event => {
+      event.stopPropagation();
+      const open = serviceNav.classList.toggle('is-open');
+      serviceTrigger.setAttribute('aria-expanded', String(open));
+    });
+    serviceNav.addEventListener('mouseleave', () => {
+      if (!serviceNav.matches(':focus-within')) closeServiceDropdown();
+    });
+    document.addEventListener('click', event => {
+      if (!serviceNav.contains(event.target)) closeServiceDropdown();
+    });
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape') { closeServiceDropdown(); serviceTrigger.focus(); }
+    });
+  }
+
+  if (mobileServices && mobileServicesTrigger) {
+    mobileServicesTrigger.addEventListener('click', () => {
+      const open = mobileServices.classList.toggle('is-open');
+      mobileServicesTrigger.setAttribute('aria-expanded', String(open));
+    });
+  }
+
   document.querySelectorAll('[data-year]').forEach(el => {
     el.textContent = new Date().getFullYear();
   });

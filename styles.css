@@ -354,8 +354,9 @@ h3 { font-size:clamp(1.45rem,2.25vw,2.25rem); line-height:1.06; }
 .contact-option h3 { margin:2rem 0 .8rem; }
 .contact-option p { color:var(--muted); min-height:66px; }
 
-.reveal { opacity:0; transform:translateY(18px); transition:opacity .65s ease, transform .65s cubic-bezier(.2,.7,.2,1); }
-.reveal.is-visible { opacity:1; transform:none; }
+.reveal { opacity:1; transform:none; }
+.reveal-ready .reveal { opacity:0; transform:translateY(18px); transition:opacity .65s ease, transform .65s cubic-bezier(.2,.7,.2,1); }
+.reveal-ready .reveal.is-visible { opacity:1; transform:none; }
 
 @media (max-width: 1080px) {
   .hero-grid { grid-template-columns:minmax(0,1fr) minmax(360px,.8fr); gap:2.5rem; }

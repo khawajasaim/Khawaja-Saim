@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-
 Sitemap: https://khawajasaim.github.io/Khawaja-Saim/sitemap.xml

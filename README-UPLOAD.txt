@@ -1,0 +1,1 @@
+Extract this ZIP. Upload ALL files inside the extracted folder to the repository root. Do not upload the ZIP or the enclosing folder. All files belong next to index.html. CV, portfolio PDF/PPT, images, animations, GTM and Search Console verification are included. Keep repository Settings > Pages configured for the same branch.

@@ -1,0 +1,1 @@
+Upload the contents of this folder to the Khawaja-Saim GitHub repository root, replacing index.html and matching scripts/assets. Do not delete other existing pages or assets. GTM-N66B8T54 is installed once in head and once in body. The PDF uses the current PPT layouts; alignment was not repaired. Retain your live GA4/Search Console verification settings when merging.

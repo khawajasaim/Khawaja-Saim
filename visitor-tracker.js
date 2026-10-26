@@ -2,7 +2,7 @@
   "use strict";
 
   // Replace this with the URL printed by `npx wrangler deploy`.
-  const WORKER_URL = "https://REPLACE-WITH-YOUR-WORKER.workers.dev";
+  const WORKER_URL = "https://portfolio-crm-api.khawajasaim0.workers.dev";
   const CONSENT_KEY = "portfolio_crm_analytics_consent_v1";
   const VISITOR_KEY = "portfolio_crm_visitor_id_v1";
   const allowedEvents = new Set([

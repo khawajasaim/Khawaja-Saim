@@ -82,10 +82,13 @@
       if (!allowedEvents.has(eventName)) return;
       const payload = {
         visitor_id: visitorId,
-        event_name: eventName,
-        page_path: location.pathname,
-        referrer: document.referrer || null,
-        event_data: eventData
+event_name: eventName,
+page_path: location.pathname,
+referrer: document.referrer || null,
+utm_source: params.get("utm_source"),
+utm_medium: params.get("utm_medium"),
+utm_campaign: params.get("utm_campaign"),
+event_data: eventData
       };
       fetch(`${WORKER_URL.replace(/\/$/, "")}/event`, {
         method: "POST",

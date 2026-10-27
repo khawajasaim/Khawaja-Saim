@@ -76,6 +76,7 @@
     if (started) return;
     started = true;
     const visitorId = getVisitorId();
+    const params = new URLSearchParams(location.search);
     const seen = new Set();
     const send = (eventName, eventData = {}) => {
       if (!allowedEvents.has(eventName)) return;

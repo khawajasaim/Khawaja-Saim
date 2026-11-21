@@ -41,7 +41,7 @@
     const box = document.createElement("aside");
     box.id = "portfolio-crm-consent";
     box.setAttribute("role", "dialog");
-    box.setAttribute("aria-label", "Analytics preference");
+    box.setAttribute("aria-label", "Cookies and similar technologies");
     box.style.cssText = [
       "position:fixed","z-index:2147483647","left:16px","right:16px","bottom:16px",
       "max-width:680px","margin:0 auto","padding:16px","border-radius:14px",
@@ -49,7 +49,7 @@
       "box-shadow:0 8px 30px #0005"
     ].join(";");
     const text = document.createElement("p");
-    text.textContent = "Allow privacy-conscious analytics on this portfolio? We record page views, scroll depth and engagement time. No Gmail or LinkedIn identity is collected by this tracker.";
+    text.textContent = "Allow browser storage to measure visits and activity on this site?";
     text.style.margin = "0 0 12px";
     const actions = document.createElement("div");
     actions.style.cssText = "display:flex;gap:8px;flex-wrap:wrap";
@@ -65,9 +65,11 @@
       });
       return button;
     };
-    actions.append(makeButton("Accept analytics", "granted"));
+    actions.append(makeButton("Accept", "granted"));
     actions.append(makeButton("Decline", "denied"));
-    box.append(text, actions);
+    const title = document.createElement("strong");
+    title.textContent = "Cookies and similar technologies";
+    box.append(title, text, actions);
     document.body.appendChild(box);
   }
 

@@ -1,0 +1,34 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="robots" content="noindex"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Portfolio form test</title>
+<style>body{margin:0;background:#101419;color:#e5eafe;font:17px/1.6 system-ui}main{max-width:580px;margin:auto;padding:32px 20px}header{min-height:110vh}label,input{display:block}input,button{box-sizing:border-box;width:100%;padding:12px;margin:6px 0 15px;border-radius:8px;font:inherit}button{cursor:pointer}form{padding-bottom:140px}</style>
+<main><header><h1>Portfolio form test</h1><p>Open this page from your local CRM. Accept analytics, then scroll down to the form. Use a fictional name and test email.</p></header>
+<form><h2>Test contact</h2><label>Name<input name="contactName" maxlength="80" required></label><label>Email<input type="email" name="contactEmail" maxlength="254" required></label><p>The test sends these details and your visitor ID to the CRM tab that opened this page.</p><button>Submit test contact</button><output role="status"></output></form></main>
+<script src="./visitor-tracker.js"></script>
+<script>
+const form = document.querySelector("form");
+const status = form.querySelector("output");
+const setup = new URLSearchParams(location.hash.slice(1));
+const target = setup.get("crm");
+const nonce = setup.get("run");
+let receiver;
+try { receiver = new URL(target); } catch {}
+const valid = receiver && ["localhost","127.0.0.1"].includes(receiver.hostname) &&
+  ["http:","https:"].includes(receiver.protocol) && receiver.origin === target && nonce && window.opener;
+window.addEventListener("message",event => {
+  if (valid && event.source === window.opener && event.origin === target &&
+      event.data?.type === "crm-form-ack" && event.data.run === nonce) {
+    status.textContent = "Received. Return to the CRM Leads tab.";
+    form.querySelector("button").disabled = true;
+  }
+});
+form.addEventListener("submit",event => {
+  event.preventDefault();
+  if (!valid) { status.textContent="Open this page from Leads in your local CRM."; return; }
+  const visitorId=localStorage.getItem("portfolio_crm_visitor_id_v1");
+  if (!visitorId || localStorage.getItem("portfolio_crm_analytics_consent_v1") !== "granted") {
+    status.textContent="Analytics consent and a tracked visit are required for this test."; return;
+  }
+  status.textContent = "Waiting for the CRM tab to acknowledge…";
+  window.opener.postMessage({type:"crm-form-contact",run:nonce,visitorId,
+    name:form.elements.contactName.value.trim(),email:form.elements.contactEmail.value.trim()},target);
+});
+</script></html>
